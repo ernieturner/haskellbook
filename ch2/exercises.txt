@@ -1,0 +1,55 @@
+# Comprehension Check
+
+1. let half x = x / 2
+   let square x = x * x
+
+2. let area x = 3.14 * (x * x)
+
+3. let area x = pi * (x * x)
+
+# Parenthesis and Association
+
+1. Yes
+2. No 
+3. Yes 
+
+# Heal the Sick
+
+1. Space after . in 3.14
+2. b undefined 
+3. y indented too far
+
+# Head Code 
+1. 5
+2. 25
+3. 30
+4. 6
+
+# Chapter Exercises
+
+## Parenthesis
+
+1. 2 + (2 * 3) - 1
+2. 10 ^ (1 + 1)
+3. ((2 ^ 2) * (4 ^ 5)) + 1
+
+## Equivalent Expressions
+
+1. Same
+2. Yes, same
+3. No (363 vs -363)
+4. Same
+5. No, different
+
+## Functions
+
+z = 7
+y = z + 8
+x = y ^ 2
+waxOn = x * 5
+
+1. 1135
+2. 1110
+3. 
+
+

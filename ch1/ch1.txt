@@ -1,0 +1,124 @@
+
+
+((λx.x)(λy.y))z
+[x := λy.y]
+(λy.y)z
+[y := z]
+zzz
+
+λxy.xy 
+(λxy.xy)1 2
+(λx(λy.xy)) 1 2
+[x := 1]
+(λy.1y) 2
+1 2
+
+λxy.xy 
+(λxy.xy)(λz.a) 1
+(λx(λy.xy))(λz.a) 1
+[x := (λz.a)]
+(λy.(λz.a)y) 1
+[y := 1]
+(λz.a)1
+[z := 1]
+a
+
+
+__________
+
+# Chapter 1 Exercises:
+
+## Equivalence Exercises:
+
+1. B (λxy.xz === λmn.mz)
+2. C (λxy.xxy === λa(λb.aab)
+3. B (λxyz.zx === λtos.st
+
+## Combinators
+
+1. Yes, combinator
+2. No 
+3. Yes, combinator
+4. Yes, combinator
+5. No
+
+## Normal Form or diverge
+
+1. λx.xxx
+2. (λz.zz)(λy.yy)
+   [z := λy.yy]
+   (λy.yy)(λy.yy)
+   diverges
+3. (λx.xxx)z
+   [x := z]
+   zzz
+
+## Beta Reduce
+
+1. (λabc.cba)zz(λwv.w)
+   (λa.λb.λc.cba)(z)z(λw.λv.w)
+   [a := z]
+   (λb.λc.cbz)(z)(λw.λv.w)
+   [b := z]
+   (λc.czz)(λw.λv.w)
+   [c := (λw.λv.w)]
+   (λw.λv.w)(z)z
+   [w := z]
+   (λv.z)(z)
+   [v := z]
+   z
+
+2. (λx.λy.xyy)(λa.a)b
+   [x := λa.a]
+   (λy(λa.a)yy)(b)
+   [y := b]
+   (λa.a)(b)b
+   [a := b]
+   bb
+
+3. (λy.y)(λx.xx)(λz.zq)
+   [y := λx.xx]
+   (λx.xx)(λz.zq)
+   [x := λz.zq]
+   (λz.zq)(λz.zq)
+   [z := λz.zq]
+   (λz.zq)q
+   [z := q]
+   qq
+
+4. (λz.z)(λz.zz)(λz.zy)
+   [z := (λz.zz)]
+   (λz.zz)(λz.zy)
+   [z := λz.zy]
+   (λz.zy)(λz.zy)
+   [z := (λz.zy)]
+   (λz.zy)(y)
+   [z := y]
+   yy
+
+5. (λx.λy.xyy)(λy.y)y
+   [x := λy.y]
+   (λy(λy.y)yy)y
+   [y := y]
+   (λy.y)(y)y
+   [y := y]
+   yy
+
+6. (λa.aa)(λb.ba)c
+   [a := λb.ba]
+   (λb.ba)(λb.ba)c
+   [b := λb.ba]
+   (λb.ba)(a)c
+   [b := a]
+   aac
+
+7. 
+
+
+
+
+
+
+
+
+

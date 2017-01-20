@@ -1,0 +1,1 @@
+https://lukleh.github.io/haskell-book-exercises/
