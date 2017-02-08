@@ -1,0 +1,11 @@
+-- Check your understanding
+-- 1. forever and when
+-- 2. Data.Bits and Database.Blacktip.Types
+-- 3. Database type definitions?
+-- 4. a
+--      MV - Control.Concurrent.MVar
+--      FPC - Filesystem.Path.CurrentOS
+--      CC - Control.Concurrent
+--    b. FS = Filesystem
+--    c. Control.Monad
+

@@ -1,0 +1,196 @@
+
+==================== FINAL INTERFACE ====================
+2017-02-01 05:15:34.363679 UTC
+
+interface main@main:PuzzleType 8001
+  interface hash: 94c6089aee942ad90b2266e8311c0ea9
+  ABI hash: e9ddda16480c5100bfb0b60df83df997
+  export-list hash: a99642b03e662a8017c1391ed86874b4
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: db42a6ce2dcb446cbc4bd8f7ba6d311a
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  PuzzleType.renderPuzzleChar
+  PuzzleType.Puzzle{PuzzleType.Puzzle}
+module dependencies:
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.List 49b86831b79b49ce5d4d9416ecba61df
+import  -/  base-4.9.0.0:Data.OldList 0058409f994fb13ae0616e3f1e5b4dae
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+c1bfb7d0a40490692ab046890861b37f
+  $fShowPuzzle :: GHC.Show.Show PuzzleType.Puzzle
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ PuzzleType.Puzzle
+                  PuzzleType.$fShowPuzzle_$cshowsPrec
+                  PuzzleType.$fShowPuzzle_$cshow
+                  PuzzleType.$fShowPuzzle_$cshowList -}
+c1bfb7d0a40490692ab046890861b37f
+  $fShowPuzzle1 ::
+    PuzzleType.Puzzle -> GHC.Base.String -> [GHC.Types.Char]
+  {- Arity: 2, HasNoCafRefs,
+     Unfolding: (\ (x :: PuzzleType.Puzzle)
+                   (s :: GHC.Base.String)[OneShot] ->
+                 case x of ww { PuzzleType.Puzzle ww1 ww2 ww3 ->
+                 GHC.Base.++ @ GHC.Types.Char (PuzzleType.$w$cshow ww2 ww3) s }) -}
+2fe4c6b22ed9d71fc4fbd9f27c8d9045
+  $fShowPuzzle2 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# ' '#) -}
+7a92e247300fa5f7c0249b3cba35b3c9
+  $fShowPuzzle3 :: (GHC.Types.Char -> b -> b) -> b -> b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(C1(U))><L,U>,
+     Unfolding: (\ @ b
+                   (c :: GHC.Types.Char -> b -> b)[OneShot]
+                   (n :: b)[OneShot] ->
+                 GHC.CString.unpackFoldrCString#
+                   @ b
+                   " \n\
+                   \\n\
+                   \Guessed so far: "#
+                   c
+                   n) -}
+c1bfb7d0a40490692ab046890861b37f
+  $fShowPuzzle_$cshow :: PuzzleType.Puzzle -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: PuzzleType.Puzzle) ->
+                 case w of ww { PuzzleType.Puzzle ww1 ww2 ww3 ->
+                 PuzzleType.$w$cshow ww2 ww3 }) -}
+c1bfb7d0a40490692ab046890861b37f
+  $fShowPuzzle_$cshowList :: [PuzzleType.Puzzle] -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (ls :: [PuzzleType.Puzzle]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ PuzzleType.Puzzle
+                   PuzzleType.$fShowPuzzle1
+                   ls
+                   s) -}
+c1bfb7d0a40490692ab046890861b37f
+  $fShowPuzzle_$cshowsPrec ::
+    GHC.Types.Int -> PuzzleType.Puzzle -> GHC.Show.ShowS
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,A><S(LSL),1*U(A,1*U,U)><L,1*U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ (ds :: GHC.Types.Int)
+                   (x :: PuzzleType.Puzzle)
+                   (s :: GHC.Base.String) ->
+                 GHC.Base.augment
+                   @ GHC.Types.Char
+                   (\ @ b
+                      (c :: GHC.Types.Char -> b -> b)[OneShot]
+                      (n :: b)[OneShot] ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b
+                      c
+                      n
+                      (PuzzleType.$fShowPuzzle_$cshow x))
+                   s) -}
+c7ff2c9760f74e53dcdf1d3004a5f4e7
+  $tc'Puzzle :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4527282430409159050##
+                   7480468044066434535##
+                   PuzzleType.$trModule
+                   PuzzleType.$tc'Puzzle1) -}
+b7ecb39d766f1ecb9f7aa45010ca1ad2
+  $tc'Puzzle1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Puzzle"#) -}
+d644fce71cc74c3a323ba750f8ed7156
+  $tcPuzzle :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2845304221567606694##
+                   5228044218668764352##
+                   PuzzleType.$trModule
+                   PuzzleType.$tcPuzzle1) -}
+21d64ad769b69f19fdbf8830cdb9d3e6
+  $tcPuzzle1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Puzzle"#) -}
+1813fbed6e8b7518eab3fbe893cceaea
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   PuzzleType.$trModule2
+                   PuzzleType.$trModule1) -}
+361c75a58d72feb40fea1ca57d1a6bf2
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "PuzzleType"#) -}
+e8b80d16db7c7dc006f467fbddc1dabc
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+908a4c3f3f7d74ae4e94df028fb57d7d
+  $w$cshow ::
+    [GHC.Base.Maybe GHC.Types.Char]
+    -> [GHC.Types.Char] -> GHC.Base.String
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: [GHC.Base.Maybe GHC.Types.Char])
+                   (ww1 :: [GHC.Types.Char]) ->
+                 case GHC.Base.map
+                        @ (GHC.Base.Maybe GHC.Types.Char)
+                        @ GHC.Types.Char
+                        PuzzleType.renderPuzzleChar
+                        ww of wild {
+                   []
+                   -> PuzzleType.$fShowPuzzle3
+                        @ [GHC.Types.Char]
+                        (GHC.Types.: @ GHC.Types.Char)
+                        ww1
+                   : x xs
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        (GHC.Types.:
+                           @ GHC.Types.Char
+                           x
+                           (Data.OldList.prependToAll
+                              @ GHC.Types.Char
+                              PuzzleType.$fShowPuzzle2
+                              xs))
+                        (PuzzleType.$fShowPuzzle3
+                           @ [GHC.Types.Char]
+                           (GHC.Types.: @ GHC.Types.Char)
+                           ww1) }) -}
+c1bfb7d0a40490692ab046890861b37f
+  data Puzzle
+    = Puzzle GHC.Base.String
+             [GHC.Base.Maybe GHC.Types.Char]
+             [GHC.Types.Char]
+b932afbed7794200000e4584f5b9afc4
+  renderPuzzleChar :: GHC.Base.Maybe GHC.Types.Char -> GHC.Types.Char
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: GHC.Base.Maybe GHC.Types.Char) ->
+                 case ds of wild {
+                   GHC.Base.Nothing -> PuzzleType.renderPuzzleChar1
+                   GHC.Base.Just a -> a }) -}
+3754f7808619d740a34d3071e38ef3b8
+  renderPuzzleChar1 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# '_'#) -}
+instance [safe] GHC.Show.Show [PuzzleType.Puzzle]
+  = PuzzleType.$fShowPuzzle
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
