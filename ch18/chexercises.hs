@@ -1,4 +1,4 @@
-module Chexercises where
+1module Chexercises where
 
 import Control.Monad (join)
 -- join :: Monad m => m (m a) -> m a

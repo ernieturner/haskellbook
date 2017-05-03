@@ -71,3 +71,22 @@ instance Monad List where
     return = pure
     Nil >>= _ = Nil
     (Cons x xs) >>= f = f x `append'` (xs >>= f)
+
+
+
+meh :: Monad m => [a] -> (a -> m b) -> m [b]
+meh [] _ = pure []
+meh (x:xs) f = do
+    b <- f x
+    bs <- meh xs f
+    return (b:bs)
+
+meh' :: Monad m => [a] -> (a -> m b) -> m [b]
+meh' [] _ = pure []
+meh' (x:xs) f = (:) <$> (f x) <*> (meh' xs f)
+
+flipType :: (Monad m) => [m a] -> m [a]
+flipType xxs = meh xxs id
+
+flipType' :: (Monad m) => [m a] -> m [a]
+flipType' = flip meh id
